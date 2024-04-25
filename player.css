@@ -1,0 +1,136 @@
+.player {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    background: white;
+    box-shadow: 0 0 20px 0px #0000003d;
+    border-radius: 15px;
+    z-index: 99;
+    padding: 0 15px 0px 15px;
+}
+  
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.track-art {
+    background: #ba9f94;
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+}
+.track-name {
+    font-weight: bolder;
+    margin-left: 10px;
+    font-size: 24px;
+    width: 200px;
+    text-overflow: ellipsis;
+}
+  
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .playpause-track, .prev-track, .next-track {
+    width: 45px;
+    height: 60px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+  
+  .playpause-track:hover, .prev-track:hover, .next-track:hover {
+    opacity: 1.0;
+  }
+  
+  .slider_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Modify the appearance of the slider */
+  .seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #ba9f94;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 350px !important;
+}
+  
+  /* Modify the appearance of the slider thumb */
+  .seek_slider::-webkit-slider-thumb, .volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 10px;
+  }
+  
+  .seek_slider:hover, .volume_slider:hover {
+    opacity: 1.0;
+  }
+  
+  .seek_slider {
+    width: 60%;
+  }
+  
+  .volume_slider {
+    width: 30%;
+  }
+  
+  .current-time, .total-duration {
+    padding: 10px;
+  }
+  
+  i.fa-volume-down, i.fa-volume-up {
+    padding: 10px;
+  }
+  
+  i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
+    cursor: pointer;
+  }
+
+  .volumeBtn {
+    display: grid;
+    width: 45px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+.volumePos {
+    width: 0px;
+}
+.volumeBlock {
+    transform: rotate(270deg) translate(120px, -125px);
+    background: white;
+    display: grid;
+    height: 45px;
+    box-shadow: 0 0 20px 0px #00000075;
+    border-radius: 10px;
+    align-items: center;
+    width: 200px;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 20px;
+    transition: .1s linear;
+}
+.hidden{
+    margin-top: 0;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+  

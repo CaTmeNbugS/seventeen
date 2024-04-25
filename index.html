@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">  
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="player.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,700,0,0" />
+    </head>
+    <body>
+        <div class="headBlock">
+            <div id="back" class="back">
+                <div class="headText">SevenTeen</div>
+            </div>
+        
+        </div>
+        <div class="headerPos" >
+            <div class="headerBlock" >
+                <div class="logo">SevenTeen</div>
+                <div class="linksBlock">
+                    <div onclick="scrolTo(0)" class="link">Главное</div>
+                    <div onclick="scrolTo(1)" class="link">Участники</div>
+                    <div onclick="scrolTo(2)" class="link">Клипы</div>
+                    <div onclick="scrolTo(3)" class="link">Песни</div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="frame">
+                <div id="info" style="margin-top: 70px;" class="contentBlock">
+                    <div class="blockHead">Инфо</div>
+                    <div class="infoBlock">
+                        <div class="info">
+                            <b>Seventeen</b> (кор. 세븐틴, также стилизизовано как <b>SEVENTEEN</b> или <b>SVT</b>) — южнокорейский бойбенд, сформированный в 2015 году компанией <b>Pledis Entertainment</b>. В коллективе задействовано 13 участников: <b>S.Coups, Джонхан, Джошуа, Джун, Хоши, Вону, Уджи, DK, Мингю, The8, Сынгван, Вернон, Дино</b>. Дебют состоялся 26 мая 2015 года с мини-альбомом <b>17 Carat</b>.<br>
+
+                            Дебютный мини-альбом <b>17 Carat</b>, стал самым продолжительным К-поп альбомом года в чартах США и единственным альбомом новичков, попавшим в список <b>Billboard</b> «Топ 10 лучших К-поп альбомов 2015 года». <b>Seventeen</b>  выпустили три студийных альбома и двенадцать мини-альбомов.<br>
+
+                            <b>Seventeen</b> считаются «самопродюсирующейся» айдол-группой, участники которой активно участвуют в написании песен и постановке хореографии, а также в других аспектах своей музыки и выступлений. Они выступают как одна группа, но разделены на три подразделения — хип-хоп, вокал и перформанс — каждое со своей областью специализации. Различные корейские и международные СМИ назвали их «Королями перформанса», «Театральными детьми K-Pop» и «Электростанцией K-Pop Performance».
+                        </div>
+                        <img style="margin-left: 25px;border-radius: 10px;" src="https://sun9-24.userapi.com/impg/z6ib_9AoDR11jx3OzBadWMtz7_6V3awkSXOL2w/tNa-ziVYGRg.jpg?size=382x571&quality=96&sign=c89f22442bbf963c9645a604280e6c49&type=album">
+                    </div>
+                </div>
+                <div style="margin-top: 70px;" class="contentBlock" >
+                    <div class="membersFrame">
+                        <div class="membersBlock"></div>
+                    </div>
+                    <div class="btnPosition">
+                        <div onclick="next(false)" class="next" id="backBtn"><span style="transform: rotate(180deg);" class="material-symbols-rounded">navigate_next</span></div>
+                        <div onclick="next(true)" class="next" id="nextBtn"><span class="material-symbols-rounded">navigate_next</span></div>
+                    </div>
+                </div>
+                <div  id="personBlock" class="contentBlock" >
+                    <div id="personName" class="personHead">Мингю</div>
+                    <div id="aboutPerson" class="blockSubHead">Ведущий рэпер, саб-вокалист, вижуал, лицо группы, хип-хоп юнит</div>
+                    <div id="personImgs" style="justify-content: space-around;" class="infoBlock">
+                        <img class="personImg" src="https://i.pinimg.com/736x/46/51/67/465167548f5a3215ed84c7114054cb46.jpg">
+                        <img class="personImg" src="https://i.pinimg.com/736x/6f/2a/72/6f2a72ce96c9a8e9cd555e772fbc4054.jpg">
+                        <img class="personImg" src="https://i.pinimg.com/736x/77/87/6a/77876a7edbc657a28ea6aeb68c9c80c4--groups-korean-actors.jpg">
+                    </div>
+                </div>
+                <div style="margin-top: 60px;" id="clips" class="contentBlock" >
+                    <div class="blockHead">Клипы</div>
+                    <div class="videoBlock">
+                        <div onclick="nextVideo(-1)" style="margin-right: 15px;" class="nextVideo"><span style="transform: rotate(180deg);" class="material-symbols-rounded">navigate_next</span></div>
+                        <div class="video">
+                            <iframe width="860" height="483" src="https://www.youtube.com/embed/zSQ48zyWZrY?si=IXobeKEImqtsQFN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div onclick="nextVideo(1)" style="margin-left: 15px;" class="nextVideo"><span class="material-symbols-rounded">navigate_next</span></div>
+                    </div>
+                </div>
+                <div style="transition: .3s linear;" id="player" class="contentBlock hiddenPlayer">
+                    <div class="player">
+                        <div class="buttons">
+                            <div class="prev-track" onclick="prevTrack()">
+                                <i style="font-size: 25px;" class="fa fa-step-backward fa-2x"></i>
+                            </div>
+                            <div class="playpause-track" onclick="playpauseTrack()">
+                                    <i style="font-size: 35px;" class="fa fa-play-circle fa-3x"></i>
+                            </div>
+                            <div class="next-track" onclick="nextTrack()">
+                                <i style="font-size: 25px;" class="fa fa-step-forward fa-2x"></i>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <div class="track-art"></div>
+                            <div class="track-name">Track Name</div>
+                        </div>
+                    
+                        <!-- Define the section for displaying the seek slider-->
+                        <div class="slider_container">
+                            <div class="current-time">00:00</div>
+                            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                            <div class="total-duration">00:00</div>
+                        </div>
+                    
+                        <!-- Define the section for displaying the volume slider-->
+                        <div onclick="showVolume()"class="volumeBtn">
+                            <i style="font-size: 20px;" class="fa fa-volume-up "></i>
+                        </div>
+                        <div class="volumePos" >
+                            <div class="volumeBlock">
+                                <input style="max-width: 150px;" type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div style="margin-bottom: 70px" id="tracks" class="contentBlock" >
+                    <div class="blockHead">Треки</div>
+                    <div class="musicBlock">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
