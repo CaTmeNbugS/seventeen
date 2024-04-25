@@ -237,4 +237,6 @@
     margin-top: 0 !important;
     opacity: 1 !important;
     visibility: visible !important;
+    display: grid;
+    justify-items: center;
 }
