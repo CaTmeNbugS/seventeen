@@ -17,7 +17,7 @@
         </div>
         <div class="headerPos" >
             <div class="headerBlock" >
-                <div class="logo">SevenTeen</div>
+                <div class="logo">Seventeen</div>
                 <div class="linksBlock">
                     <div onclick="scrolTo(0)" class="link">Главное</div>
                     <div onclick="scrolTo(1)" class="link">Участники</div>
@@ -29,7 +29,7 @@
         <div class="wrapper">
             <div class="frame">
                 <div id="info" style="margin-top: 70px;" class="contentBlock">
-                    <div class="blockHead">Информация</div>
+                    <div class="blockHead">Инфо</div>
                     <div class="infoBlock">
                         <div class="info">
                             <b>Seventeen</b> (кор. 세븐틴, также стилизизовано как <b>SEVENTEEN</b> или <b>SVT</b>) — южнокорейский бойбенд, сформированный в 2015 году компанией <b>Pledis Entertainment</b>. В коллективе задействовано 13 участников: <b>S.Coups, Джонхан, Джошуа, Джун, Хоши, Вону, Уджи, DK, Мингю, The8, Сынгван, Вернон, Дино</b>. Дебют состоялся 26 мая 2015 года с мини-альбомом <b>17 Carat</b>.<br>
@@ -69,7 +69,7 @@
                         <div onclick="nextVideo(1)" style="margin-left: 15px;" class="nextVideo"><span class="material-symbols-rounded">navigate_next</span></div>
                     </div>
                 </div>
-                <div style="transition: .3s linear;" id="player" class="contentBlock hiddenPlayer">
+                <div style="display: grid; justify-items: center;transition: .3s linear;" id="player" class="contentBlock hiddenPlayer">
                     <div class="player">
                         <div class="buttons">
                             <div class="prev-track" onclick="prevTrack()">
@@ -83,18 +83,15 @@
                             </div>
                         </div>
                         <div class="details">
-                            <div class="track-art"></div>
+                            <div class="track-art">
+                            </div>
                             <div class="track-name">Track Name</div>
                         </div>
-                    
-                        <!-- Define the section for displaying the seek slider-->
                         <div class="slider_container">
                             <div class="current-time">00:00</div>
                             <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
                             <div class="total-duration">00:00</div>
                         </div>
-                    
-                        <!-- Define the section for displaying the volume slider-->
                         <div onclick="showVolume()"class="volumeBtn">
                             <i style="font-size: 20px;" class="fa fa-volume-up "></i>
                         </div>
@@ -103,11 +100,12 @@
                                 <input style="max-width: 150px;" type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div style="margin-bottom: 70px" id="tracks" class="contentBlock" >
                     <div class="blockHead">Треки</div>
+                    <div id="albumBlock" class="albumBlock" >
+                    </div>
                     <div class="musicBlock">
                     </div>
                 </div>
